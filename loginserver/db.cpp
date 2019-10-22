@@ -93,13 +93,12 @@ cout<<p<<endl;
 	{
 	        cout<<"3"<<endl;
 		cout<<"register ok"<<endl;
-		sendData(connFd,"register ok");
-		sleep(2);
 		char sendmsg[1024]={0};
-		sprintf(sendmsg,"login ok,%s,%s,%s",seradd,seruser,serpwd);
-	   	cout<<sendmsg<<endl;
+		sprintf(sendmsg,"register ok,%s,%s,%s",seradd,seruser,serpwd);
+	   	
 		sendData(connFd,sendmsg);
 		
+		sleep(2);
 		return 0;
 	}
 }
